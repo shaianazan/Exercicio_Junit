@@ -1,0 +1,65 @@
+package Carrinho;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
+public class CarrinhoTeste {
+	
+	CarrinhoTeste items;
+	Produto livro, livro1;
+	
+	@DisplayName ("Teste do Carrinho")
+	@BeforeEach
+	
+	public void inicializa() {
+		livro = new Produto ("Introdução ao teste de software", 100.00);
+		livro1 = new Produto ("O Segredo", 90.00);
+	}
+	
+	@DisplayName ("Teste para adicionar livros ao carrinho")
+	@BeforeEach
+	@Test
+	public void inicializaCarrinho() {
+		items = new CarrinhoTeste();
+		items.addItem (livro);
+		items.addItem (livro1);
+	}
+
+	private void addItem(Produto livro2) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+
+	@DisplayName ("Testar quantidade de produtos no carrinho")
+	@Test
+	public void testaQuantidade() {
+		int quantidade = items.getQtdeItems();
+		Assertions.assertEquals (2, quantidade);
+				
+	}
+
+	private int getQtdeItems() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	@DisplayName ("Testar remoção de produto do carrinho")
+	@Test
+	public void testaRemover()throws ProdutoNaoEncontradoException {
+		items.removeItem (livro);
+		
+	}
+
+	private void removeItem(Produto livro2) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+	
+	
+	
+}

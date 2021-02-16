@@ -1,0 +1,6 @@
+module intro_junit {
+	exports produto;
+	exports basico;
+	exports carrinho;
+	exports calculadora;
+}
